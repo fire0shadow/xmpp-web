@@ -13,23 +13,23 @@ module.exports = {
     themeColor: '#333333',
     msTileColor: '#333333',
     iconPaths: {
-      favicon32: 'xmpp-web/icons/favicon-32x32.png',
-      favicon16: 'xmpp-web/icons/favicon-16x16.png',
-      appleTouchIcon: 'xmpp-web/icons/apple-touch-icon.png',
-      maskIcon: 'xmpp-web/icons/safari-pinned-tab.svg',
-      msTileImage: 'xmpp-web/icons/mstile-150x150.png',
+      favicon32: 'img/icons/favicon-32x32.png',
+      favicon16: 'img/icons/favicon-16x16.png',
+      appleTouchIcon: 'img/icons/apple-touch-icon.png',
+      maskIcon: 'img/icons/safari-pinned-tab.svg',
+      msTileImage: 'img/icons/mstile-150x150.png',
     },
     manifestOptions: {
       name: 'XMPP web',
       short_name: 'XMPP web',
       icons: [
         {
-          src: '/xmpp-web/icons/android-chrome-192x192.png',
+          src: '/img/icons/android-chrome-192x192.png',
           sizes: '192x192',
           type: 'image/png',
         },
         {
-          src: '/xmpp-web/icons/android-chrome-512x512.png',
+          src: '/img/icons/android-chrome-512x512.png',
           sizes: '512x512',
           type: 'image/png',
         },
