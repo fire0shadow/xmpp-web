@@ -75,10 +75,10 @@ export default {
         console.error('send error', error)
       }
     },
-    newLine(e) {
-      let caret = e.target.selectionStart;
-      e.target.setRangeText("\n", caret, caret, "end");
-      this.text = e.target.value;
+  newLine (e) {
+      const caret = e.target.selectionStart
+      e.target.setRangeText('\n', caret, caret, 'end')
+      this.text = e.target.value
     },
     onFileChange (e) {
       const files = e.target.files || e.dataTransfer.files
