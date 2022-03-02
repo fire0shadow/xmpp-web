@@ -3,7 +3,7 @@
     <form @submit.prevent="sendMessage">
       <div class="field is-flex is-align-items-center mr-3">
         <div class="control is-flex-grow-1">
-          <textarea v-model="composingMessage" class="textarea has-background-shade-4 is-shadowless has-placeholder-shade-1" :placeholder="!file? 'Send message' : ''" rows="2" :disabled="fileThumbnail || fileIcon" @keyup.ctrl.enter="sendMessage" />
+          <textarea v-model="composingMessage" class="textarea has-background-shade-4 is-shadowless has-placeholder-shade-1" :placeholder="!file? 'Send message' : ''" rows="2" :disabled="fileThumbnail || fileIcon" @keyup.enter.prevent.exact="sendMessage" @keyup.ctrl.enter.prevent="newLine" />
           <div v-if="fileThumbnail || fileIcon" class="thumbnail-container">
             <img v-if="fileThumbnail" :src="fileThumbnail" class="thumbnail">
             <i v-if="fileIcon" class="fa fa-2x" :class="fileIcon" />
@@ -74,6 +74,11 @@ export default {
       } catch (error) {
         console.error('send error', error)
       }
+    },
+    newLine(e) {
+      let caret = e.target.selectionStart;
+      e.target.setRangeText("\n", caret, caret, "end");
+      this.text = e.target.value;
     },
     onFileChange (e) {
       const files = e.target.files || e.dataTransfer.files

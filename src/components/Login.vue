@@ -5,11 +5,11 @@
         <div class="column is-4 is-offset-4">
           <div class="box has-background-shade-3">
             <form @submit.prevent="login">
-              <h3 class="title has-text-grey">XMPP webchat</h3>
+              <h3 class="title has-text-grey">FagearTechCorner webchat</h3>
               <p class="subtitle has-text-grey">Login</p>
               <div class="field">
                 <div class="control has-icons-left">
-                  <input v-model="credentials.jid" class="input is-medium" type="text" name="jid" placeholder="username@domain.ltd">
+                  <input v-model="credentials.jid" class="input is-medium" type="text" name="jid" placeholder="Username">
                   <span class="icon is-small is-left">
                     <i class="fa fa-user" />
                   </span>
