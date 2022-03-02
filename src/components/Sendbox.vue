@@ -3,7 +3,7 @@
     <form @submit.prevent="sendMessage">
       <div class="field is-flex is-align-items-center mr-3">
         <div class="control is-flex-grow-1">
-          <textarea v-model="composingMessage" class="textarea has-background-shade-4 is-shadowless has-placeholder-shade-1" :placeholder="!file? 'Send message' : ''" rows="2" :disabled="fileThumbnail || fileIcon" @keyup.enter.prevent.exact="sendMessage" @keyup.ctrl.enter.prevent="newLine" />
+          <textarea v-model="composingMessage" class="textarea has-background-shade-4 is-shadowless has-placeholder-shade-1" :placeholder="!file? 'Send message' : ''" rows="2" :disabled="fileThumbnail || fileIcon" @keydown.enter.exact.prevent @keyup.enter.exact="sendMessage" @keydown.ctrl.enter.exact="newLine" />
           <div v-if="fileThumbnail || fileIcon" class="thumbnail-container">
             <img v-if="fileThumbnail" :src="fileThumbnail" class="thumbnail">
             <i v-if="fileIcon" class="fa fa-2x" :class="fileIcon" />
