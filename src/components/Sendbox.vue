@@ -75,7 +75,7 @@ export default {
         console.error('send error', error)
       }
     },
-  newLine (e) {
+    newLine (e) {
       const caret = e.target.selectionStart
       e.target.setRangeText('\n', caret, caret, 'end')
       this.text = e.target.value
